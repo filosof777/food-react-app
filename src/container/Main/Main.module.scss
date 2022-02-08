@@ -1,0 +1,56 @@
+@import './../../assets/styles/main.scss';
+
+.Main {
+  padding: 24px 0;
+
+  .Category {
+    display: flex;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: $border;
+
+    li {
+
+      a {
+        @include font(14px, 600, #fff);
+        transition: $tr-color;
+      }
+
+      &:hover {
+        a {
+          color: $bg-primary;
+        }
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  .Wrapper {
+    padding: 24px 0;
+    
+    .FoodList {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        position: absolute;
+        top: 0;
+        
+      }
+      
+      input {
+        @include button-secondary;
+        width: 100px;
+        height: 48px;
+      }
+      
+      ul {
+        position: absolute;
+      }
+    }
+  }
+}

@@ -1,49 +1,59 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import "./Header.scss";
+import { Link, NavLink } from "react-router-dom";
+
+import { ReactComponent as Logo } from "../../../src/assets/icons/logo.svg";
+import { ReactComponent as Home } from "../../../src/assets/icons/home.svg";
+import { ReactComponent as Precent } from "../../../src/assets/icons/precent.svg";
+import { ReactComponent as Chart } from "../../../src/assets/icons/chart.svg";
+import { ReactComponent as Email } from "../../../src/assets/icons/email.svg";
+import { ReactComponent as Bell } from "../../../src/assets/icons/bell.svg";
+import { ReactComponent as Setting } from "../../../src/assets/icons/setting.svg";
+import { ReactComponent as LogOut } from "../../../src/assets/icons/log-out.svg";
 
 function Header() {
   return (
-    <header>
-      <Link to="/">
-        <img src="/images/logo.png" alt="logo" />
+    <header className="Header">
+      <Link className="Logo" to="/">
+        <Logo />
       </Link>
-      <ul>
+      <ul className="List">
         <li>
-          <Link to="/">
-            <i class="far fa-home-alt"></i>
-          </Link>
+          <NavLink to="/">
+            <span>
+              <Home />
+            </span>
+          </NavLink>
         </li>
         <li>
-          <Link to="/info">
-            <i class="fal fa-badge-percent"></i>
-          </Link>
+          <NavLink to="/notification">
+            <Precent />
+          </NavLink>
         </li>
         <li>
-          <Link to="/dashboard">
-            <i class="fal fa-chart-pie-alt"></i>
-          </Link>
+          <NavLink to="/info">
+            <Chart />
+          </NavLink>
         </li>
         <li>
-          <Link to="/email">
-            <i class="fal fa-envelope"></i>
-          </Link>
+          <NavLink to="/dashboard">
+            <Email />
+          </NavLink>
         </li>
         <li>
-          <Link to="/notification">
-            <i class="fal fa-bell"></i>
-          </Link>
+          <NavLink to="/setting">
+            <Bell />
+          </NavLink>
         </li>
         <li>
-          <Link to="/setting">
-            <i class="fal fa-cog"></i>
-          </Link>
-        </li>
-        <li>
-          <Link to="/log-out">
-            <i class="fal fa-sign-out"></i>
-          </Link>
+          <NavLink to="/setting">
+            <Setting />
+          </NavLink>
         </li>
       </ul>
+      <NavLink className="LogOut" to="/log-out">
+        <LogOut />
+      </NavLink>
     </header>
   );
 }

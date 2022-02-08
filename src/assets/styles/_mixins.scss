@@ -1,0 +1,19 @@
+@mixin font( $size, $weight, $color ) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin button-primary {
+  border: $border;
+  background-color: $bg-input;
+  border-radius: 8px;
+  color: $color-primary;
+}
+
+@mixin button-secondary {
+  border: $border;
+  background-color: $bg-input;
+  border-radius: 8px;
+}
+

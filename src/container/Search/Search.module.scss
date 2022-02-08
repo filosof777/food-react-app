@@ -1,0 +1,42 @@
+@import '../../../src/assets/styles/main.scss';
+
+.Search {
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  h1 {
+    @include font(28, 600, #fff);
+  }
+
+  p {
+    @include font(16, 400, $color-secondary);
+  }
+
+  form {
+    width: 220px;
+    height: 48px;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 100%;
+      @include button-secondary;
+      color: #fff;
+      padding: 14px 14px 14px 48px; 
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 48px;
+      height: 48px;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+    }
+  }
+}

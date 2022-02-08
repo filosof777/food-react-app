@@ -1,0 +1,84 @@
+@import "../../assets/styles/main.scss";
+
+.Header {
+  height: 100vh;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $bg-dark;
+  border-radius: 16px;
+  padding: 24px 0;
+
+  .Logo {
+    padding: 24px;
+
+    svg {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .List {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+
+    li {
+      border-radius: 8px 0 0 8px;
+      padding: 16px 24px 16px 16px;
+      width: 92px;
+      height: 88px;
+      
+      a {
+        display: block;
+        padding: 16px;
+        border-radius: 8px;
+        transition: $tr-background-color, $tr-box-shadow;
+        
+        path {
+          fill: $bg-primary;
+        }
+      }
+    }
+
+    li {
+      
+      .active {
+        position: relative;
+        background-color: $bg-secondary;
+
+        a {
+          background-color: $bg-primary;
+          box-shadow: $box-shadow;
+        
+          path {
+            fill: $color-primary;
+          }
+        }
+      }
+    }
+
+
+    li:hover a {
+      background-color: $bg-primary;
+      box-shadow: $box-shadow-hover;
+      
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .LogOut {
+    margin-bottom: auto;
+    width: 92px;
+    height: 102px;
+    display: flex;
+    transform: translateX(14px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
